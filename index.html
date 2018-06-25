@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
     <title>Simple HTML</title>
   </head>
   <body>
     <header class="page-header">
-      <section class="section-logo">
-        <div>
-          <a href="#">
-            <img src="#" alt="logo"/>
-            <h1>specialized clinic</h1>
+      <section class="section-logo clearfix container">
+        <div class="logo">
+          <a href="#"><img src="image/logo.png" alt="logo"/></a>
+          <div>
+            <h1><a href="#">specialized clinic</a></h1>
             <span>Physiotherapy - Rehabilitation</span>
-          </a>
+          </div>
         </div>
         <div class="contact">
-          <img src="#" alt="telephone"/>
-          <p>Question for the doctor ? <span>05113941 997</span></p>
+          <p>
+            <span><img src="image/telephone.png" alt="telephone"/></span>
+            <span class="italic-text">Question for the doctor ? </span> 
+            <span class="telephone-text">05113941 997</span>
+          </p>
         </div>
       </section>
-      <nav class="nav-header">
-        <ul class="menu-page-list">
-          <li class="menu-page-item"><a href="#">home</a>
-          <li class="menu-page-item"><a href="#">about us</a>
-          <li class="menu-page-item"><a href="#">health services</a>
-          <li class="menu-page-item"><a href="#">regular medicine</a>
-          <li class="menu-page-item"><a href="#">set calendar</a>
-          <li class="menu-page-item"><a href="#">consult & contact</a>
-        </ul>
-        <ul class="menu-social-list">
-          <li class="menu-social-item"><a href="#"><img src="#" alt="FB"></a>
-          <li class="menu-social-item"><a href="#"><img src="#" alt="GPlus"></a>
-          <li class="menu-social-item"><a href="#"><img src="#" alt="YT"></a>
-        </ul>
+      <nav class="nav-header clearfix">
+        <div class="container">
+          <ul class="menu-page-list">
+            <li class="menu-page-item"><a href="#">home</a>
+            <li class="menu-page-item"><a href="#">about us</a>
+            <li class="menu-page-item"><a href="#">health services</a>
+            <li class="menu-page-item"><a href="#">regular medicine</a>
+            <li class="menu-page-item"><a href="#">set calendar</a>
+            <li class="menu-page-item"><a href="#">consult & contact</a>
+          </ul>
+          <ul class="menu-social-list">
+            <li class="menu-social-item"><a href="#"><img src="image/facebook-24@1X.png" alt="FB"></a>
+            <li class="menu-social-item"><a href="#"><img src="image/google_plus-24@1X.png" alt="GPlus"></a>
+            <li class="menu-social-item"><a href="#"><img src="image/youtube-24@1X.png" alt="YT"></a>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page-main">
       <section class="section-banner">
-        <img src="image/Banner.jpg" alt="#">
-        <ul class="breadcrumb">
+        <!-- <img src="image/Banner.jpg" alt="#"> -->
+        <ul class="breadcrumb container">
           <li><a href="#">HOME</a></li>
-          <li><span>HEALTH SERVICES</span></li>
+          <li>HEALTH SERVICES</li>
         </ul>
       </section>
-      <section class="section-content">
+      <section class="section-content container clearfix">
         <aside class="sidebar-left">
           <ul class="category-list">
             <li class="category-item">
-              <h3>ADULTS<span class="display_expand">-</span></h3>
+              <h4>ADULTS<span class="display-expand">-</span></h4>
               <ul class="adult-list">
                 <li class="adult-item"><a href="#">Neck-shoulder-hand pain</a></li>
                 <li class="adult-item"><a href="#">Spinal pain</a></li>
@@ -61,96 +70,148 @@
               </ul>
             </li>
             <li class="category-item">
-              <h3>CHILDREN<span class="display_expand">+</span></h3>
+              <h4>CHILDREN<span class="display-expand">+</span></h4>
             </li>  
           </ul>
-          <form action="#" method="POST">
-            <input type="text" id="name" placeholder="Full Name">
-            <input type="text" id="address" placeholder="Address">
-            <input type="text" id="phone" placeholder="Phone Number">
-            <input type="date" id="date" placeholder="Time">
-            <button type="submit" name="SEND">SEND</button>
-          </form>
+          <div class="book-schedule-form">
+            <h3>BOOK SCHEDULE</h3>
+            <form action="#" method="POST">
+              <input type="text" id="name" placeholder="Full Name">
+              <input type="text" id="address" placeholder="Address">
+              <input type="text" id="phone" placeholder="Phone Number">
+              <input type="datetime" id="date" placeholder="Time">
+              <button type="submit" name="SEND">SEND</button>
+            </form>
+          </div>
         </aside>
         <div class="main-content">
-          <ul class="disease-list">
+          <ul class="disease-list list-vertical">
             <li class="desease-item">
-              <a href="#"><img src="image/Img1.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img1.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img2.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img2.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img3.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img3.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img4.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img4.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img5.jpg" alt="#"></a>
-              <h4>SLOW SAY</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img5.jpg" alt="#"></a>
+                <h4>SLOW SAY</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img6.jpg" alt="#"></a>
-              <h4>SLOW SAY</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img6.jpg" alt="#"></a>
+                <h4>SLOW SAY</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img7.jpg" alt="#"></a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-              <h4>SLOW SAY</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img7.jpg" alt="#"></a> 
+                <h4>SLOW SAY</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img8.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img8.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
             <li class="desease-item">
-              <a href="#"><img src="image/Img9.jpg" alt="#"></a>
-              <h4>NECK SHOULDER PAIN</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+              <div>
+                <a href="#"><img src="image/Img9.jpg" alt="#"></a>
+                <h4>NECK SHOULDER PAIN</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+                <a href="#"><span class="right-arrow"></span></a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="footer-list">
-        <li class="footer-item">
-          <h4>about us</h4>
-          <ul class="footer-item-detail">
-            <li>general introduction</li>
-            <li>human</li>
-            <li>facilities and facilities</li>
-          </ul>
-        </li>
-        <li class="footer-item">
-          <h4>support</h4>
-          <ul class="footer-item-detail">
-            <li>health counsling</li>
-            <li>regular medicines</li>
-            <li>schedule appointment</li>
-          </ul>
-        </li>
-        <li class="footer-item">
-          <h4>social connection</h4>
-          <ul class="footer-item-detail">
-            <li><img src="#" alt="fb-logo"/>facebook</li>
-            <li><img src="#" alt="gg-logo"/>google+</li>
-            <li><img src="#" alt="yt-logo"/>youtube</uli>
-          </ul>
-        </li>  
-      </ul>
-      <span>@ 2018 - copyright of specialized clinic</span>
+      <div class="footer-top container">
+        <ul class="footer-list list-vertical clearfix">
+          <li class="footer-item">
+            <h4>about us</h4>
+            <ul class="footer-item-detail footer-item-detail-custom">
+              <li><a href="#" class="link-style">general introduction</a></li>
+              <li><a href="#" class="link-style">human</a></li>
+              <li><a href="#" class="link-style">facilities and facilities</a></li>
+            </ul>
+          </li>
+          <li class="footer-item">
+            <h4>support</h4>
+            <ul class="footer-item-detail footer-item-detail-custom">
+              <li><a href="#" class="link-style">health counsling</a></li>
+              <li><a href="#" class="link-style">regular medicines</a></li>
+              <li><a href="#" class="link-style">schedule appointment</a></li>
+            </ul>
+          </li>
+          <li class="footer-item">
+            <h4>social connection</h4>
+            <ul class="footer-item-detail social">
+              <li>
+                <a href="#" class="link-style">
+                  <span><img src="image/facebook-24_tranparent@1X.png" alt="fb-logo"/></span>
+                  <span>facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-style">
+                  <span><img src="image/google_plus-24_tranparent@1X.png" alt="gg-logo"/></span>
+                  <span>google+</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-style">
+                  <span><img src="image/facebook-24_tranparent@1X.png" alt="yt-logo"/></span>
+                  <span>youtube</span>
+                </a>
+              </li>
+            </ul>
+          </li>  
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="container clearfix">
+          <div>@ 2018 - copyright of specialized clinic</div>
+          <div>design by <a href="dd.com">dd.com</a></div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
