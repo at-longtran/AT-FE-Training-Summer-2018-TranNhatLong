@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.keyword {
+  background-color: #eff0f1;
+  padding: 2px;
+}
+.problem {
+  padding: 10px;
+}
+ul {
+  padding-left: 30px;
+}
+li {
+  padding-bottom: 5px;
+}

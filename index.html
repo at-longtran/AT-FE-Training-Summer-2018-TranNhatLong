@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML with javascript sample</title>
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <script src="javascript/main.js"></script>
+</head>
+<body>
+  <main class="container">
+    <section class="background">
+      <h2>Knowledge round-up</h2>
+      <div class="problem problem1">
+        <h4>Null vs undefined</h4>
+        <p><span class="keyword">Undefined</span> chỉ ra một biến đã được khởi tạo nhưng chưa được gán giá trị.</p>
+        <p><span class="keyword">Null</span> chỉ ra một biến đã được khởi tạo và mang giá trị NULL.</p>
+        <pre><code>
+            var TestVar;
+            alert(TestVar); //shows undefined
+            var TestVar = null;
+            alert(TestVar); //shows null
+        </code></pre>
+      </div>
+      <div class="problem problem2">
+        <h4>Use strict</h4>
+        <ul>
+          <li>
+            <p>
+              Khái niệm: Khi một đoạn lệnh được khai báo <span class="keyword">use strict</span> thì tất cả các dòng code ở phía dưới dòng khai báo <span class="keyword">use strict</span> sẽ được quản lý một cách nghiêm ngặt hơn về cú pháp.
+              <br>Khi sử dụng <span class="keyword">use strict</span> mode thì những dòng code trước đây bạn có thể chạy bình thường có thể sẽ không chạy được nữa.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ưu: Tăng độ chặt chẽ và an toàn, cũng như hạn chế những lỗi không đáng có và đảm bảo chương trình có thể chạy trên mọi trình duyệt hiện nay.
+            </p>
+          </li>
+          <li>
+            <p>
+              Nhược: Phải khởi tạo biến trước khi gán gía trị. Không được sự dụng các từ khóa đặc biệt làm tên biến. 
+            </p>
+            <p>
+              Một số chức nẳng khác bị hạn chế như: không thể  dùng <span class="keyword">delete</span> cho biến, không thể khai báo biến từ 2 lần trở lên...
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="problem problem3">
+        <h4>== vs ===</h4>
+        <p><span class="keyword">==</span> So sánh giá trị của 2 biến</p>
+        <p><span class="keyword">===</span> So sánh giá trị và kiểu dữ liệu của 2 biến</p>
+        <pre><code>
+            0 == ''             // true
+            0 == '0'            // true
+            0 === '0'           // false
+        </code></pre>
+      </div>
+      <div class="problem problem4">
+        <h4>var, const and let</h4>
+        <ul>
+          <li>
+            <p><span class="keyword">var</span> tạo ra một biến mà có thể được truy cập ở một ví trí nào khác trong chương trình</p>
+          </li>
+          <li>
+            <p><span class="keyword">let</span>  tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó, khác với var - tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó.</p>
+          </li>
+          <li>
+            <p><span class="keyword">const</span> dùng để khai báo một hằng số - là một giá trị không thay đổi được trong suốt quá trình chạy.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="exercise-section">
+      <h2>Exercise</h2>
+    </section>
+  </main>
+</body>
+</html>
