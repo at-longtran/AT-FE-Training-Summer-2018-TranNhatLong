@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+.container::after {
+  display: block;
+  content: "";
+  clear: both
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both
+}
+.header-logo {
+  float: left;
+}
+.header-cart {
+  float: right;
+  vertical-align: middle;
+}
+.header-logo img {
+  width: 150px;
+  height: 100px;
+}
+.cart-button {
+  background: url(../image/cart.png);
+  display: inline-block;
+  border: unset;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.product-header {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 0 20px;
+}
+.product-item {
+  width: calc(100%/4 - 15px);
+  margin: 0 5px 10px;
+  border: #ebebeb solid 1px;
+  position: relative;
+  display: inline-block
+}
+.product-item img {
+  width: 100%;
+}
+.product-item-title {
+  padding: 15px 10px;
+  font-size: 0.875em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product-item-price {
+  color: red;
+  padding: 0 10px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.product-item-price::after {
+  content: " d"
+}
+.product-item-button{
+  display: block;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color:#ffffff;
+  background: linear-gradient(rgb(118, 141, 135) 5%, rgb(108, 124, 124) 100%) rgb(118, 141, 135);
+  border-radius: 5px;
+}
+.product-item-button[disabled=disabled], .product-item-button:disabled {
+  color: #8d8d8d;
+  background: #e8e8e8;
+}
+
+.table-carted {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  text-align: center;
+  padding: 10px 0;
+  background: #8d8d8d;
+}
+td *, td {
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.product-item-carted img {
+  width: 150px;
+  height: 150px;
+}
+.table-carted tr:nth-child(odd) {
+    background-color: #eee;
+}  
+.remove-btn {
+  width: 40px;
+  height: 40px;
+  background: url("../image/remove.png");
+  background-size: 100% 100%;
+  cursor: pointer;
+  margin: auto;
+}
