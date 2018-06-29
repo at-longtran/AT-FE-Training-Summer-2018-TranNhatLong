@@ -1,56 +1,57 @@
 var products = [
   {
-    id : "product1",
-    img: "image/samsung-galaxy-a8-star-2018-600x600.jpg",
-    name: "Samsung Galaxy A8 Star",
-    price: 13990000
+    "id": "product1",
+    "img": "image/samsung-galaxy-a8-star-2018-600x600.jpg",
+    "name": "Samsung Galaxy A8 Star",
+    "price": 13990000
   },
   {
-    id : "product2",
-    img: "image/samsung-galaxy-note8-hh-600x600-600x600.jpg",
-    name: "Samsung Galaxy Note 8",
-    price: 22490000
+    "id": "product2",
+    "img": "image/samsung-galaxy-note8-hh-600x600-600x600.jpg",
+    "name": "Samsung Galaxy Note 8",
+    "price": 22490000
   },
   {
-    id : "product3",
-    img: "image/iphone-x-256gb-gray-600x600.jpg",
-    name: "iPhone X 256GB Gray",
-    price: 34790000
+    "id": "product3",
+    "img": "image/iphone-x-256gb-gray-600x600.jpg",
+    "name": "iPhone X 256GB Gray",
+    "price": 34790000
   },
   {
-    id : "product4",
-    img: "image/samsung-galaxy-a6-2018-2-600x600.jpg",
-    name: "Samsung Galaxy A6 (2018)",
-    price: 6990000
+    "id": "product4",
+    "img": "image/samsung-galaxy-a6-2018-2-600x600.jpg",
+    "name": "Samsung Galaxy A6 (2018)",
+    "price": 6990000
   },
   {
-    id : "product5",
-    img: "image/iphone-8-plus-hh-600x600.jpg",
-    name: "iPhone 8 Plus 64GB",
-    price: 23990000
+    "id": "product5",
+    "img": "image/iphone-8-plus-hh-600x600.jpg",
+    "name": "iPhone 8 Plus 64GB",
+    "price": 23990000
   },
   {
-    id : "product6",
-    img: "image/huawei-nova-3e-2-600x600.jpg",
-    name: "Huawei Nova 3e",
-    price: 6990000
+    "id": "product6",
+    "img": "image/huawei-nova-3e-2-600x600.jpg",
+    "name": "Huawei Nova 3e",
+    "price": 6990000
   },
   {
-    id : "product7",
-    img: "image/ipad-6th-wifi-128-gb-2-600x600.jpg",
-    name: "iPad Wifi 128 GB (2018)",
-    price: 11990000
+    "id": "product7",
+    "img": "image/ipad-6th-wifi-128-gb-2-600x600.jpg",
+    "name": "iPad Wifi 128 GB (2018)",
+    "price": 11990000
   },
   {
-    id : "product8",
-    img: "image/iphone-6-32gb-gold-hh-600x600.jpg",
-    name: "iPhone 6 32GB",
-    price: 7490000
+    "id": "product8",
+    "img": "image/iphone-6-32gb-gold-hh-600x600.jpg",
+    "name": "iPhone 6 32GB",
+    "price": 7490000
   },            
 ];
 
 if (localStorage.getItem("cart") == undefined) {
-  localStorage.cart = JSON.stringify([]);
+  // localStorage.cart = JSON.stringify([]);//bad
+  localStorage.setItem("cart", JSON.stringify([]));//good
 }
 var numberCartedItem = getLocalItem("totalCart");
 var listCartedId = JSON.parse(localStorage.cart); 
@@ -65,11 +66,10 @@ window.onload = function() {
     addEventForRemoveButton();
   }
 }
-function getLocalItem(key) {
-  console.log(localStorage.getItem(key));
+function getLocalItem(key, value = 0) {
   if (!localStorage.getItem(key)) {
-    setLocalItem(key, 0);
-    return 0;
+    // setLocalItem(key, value);
+    return value;
   }
   return localStorage.getItem(key); 
 }
@@ -116,9 +116,9 @@ function showCart() {
 }
 
 function addEventForProductItem() {
-  var productItems = document.querySelectorAll('.product-item .product-item-button');
+  var productItems = document.querySelectorAll('.product-item .product-item-button');//can use with selectByClass
   var totalItem = productItems.length;
-  for (var i = 0; i < totalItem; i++) { //don't use for in due to other key not numberic
+  for (var i = 0; i < totalItem; i++) { //don't use for in due to other key not numberic . Readmore: for in(key).for of(value) (ES6)
     var idProduct = productItems[i].parentElement.parentElement.id;
     if (listCartedId.indexOf(idProduct) >= 0) {
       productItems[i].disabled = true;
@@ -143,14 +143,14 @@ function updateNumberCarted(totalItem) {
 function addEventForRemoveButton() {
   var productItemsCarted = document.querySelectorAll('.product-item-carted');
   var totalItemCarted = productItemsCarted.length;
-  for (let i = 0; i < totalItemCarted; i++) {
+  for (var i = 0; i < totalItemCarted; i++) {
     var idProduct = productItemsCarted[i].id;
     productItemsCarted[i].parentElement.parentElement.getElementsByClassName('remove-btn')[0]
-    .addEventListener("click", function () {
-      listCartedId.splice(listCartedId.indexOf(idProduct), 1);
-      localStorage.setItem("cart", JSON.stringify(listCartedId));
-      this.parentElement.parentElement.remove();
-      updateNumberCarted(--numberCartedItem);
+      .addEventListener("click", function () {
+        listCartedId.splice(listCartedId.indexOf(idProduct), 1);
+        localStorage.setItem("cart", JSON.stringify(listCartedId));
+        this.parentElement.parentElement.remove();
+        updateNumberCarted(--numberCartedItem);
     });
   }  
 }
